@@ -1,0 +1,432 @@
+05-17 19:50:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "Vanya" not found; SQL statement:
+INsert into AUTHOR (id, FIRST_NAME , laST_NAME ) VALUES (1, "Vanya", "Mihova") [42122-175]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:332)
+	at org.h2.message.DbException.get(DbException.java:172)
+	at org.h2.message.DbException.get(DbException.java:149)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:144)
+	at org.h2.command.dml.Insert.prepare(Insert.java:271)
+	at org.h2.command.Parser.prepareCommand(Parser.java:240)
+	at org.h2.engine.Session.prepareLocal(Session.java:436)
+	at org.h2.engine.Session.prepareCommand(Session.java:379)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:156)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1321)
+	at org.h2.server.web.WebApp.query(WebApp.java:1010)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:972)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:959)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:748)
+05-17 19:51:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO AUTHOR (ID, FIRST_NAME , LAST_NAME ) SET ([*]1, ""Vanya"", ""Mihova"") "; SQL statement:
+INsert into AUTHOR (id, FIRST_NAME , laST_NAME ) SET (1, "Vanya", "Mihova") [42000-175]
+05-17 19:51:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "Vanya" not found; SQL statement:
+INsert into AUTHOR ( "FIRST_NAME" , "LAST_NAME" ) VALUES ("Vanya", "Mihova") [42122-175]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:332)
+	at org.h2.message.DbException.get(DbException.java:172)
+	at org.h2.message.DbException.get(DbException.java:149)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:144)
+	at org.h2.command.dml.Insert.prepare(Insert.java:271)
+	at org.h2.command.Parser.prepareCommand(Parser.java:240)
+	at org.h2.engine.Session.prepareLocal(Session.java:436)
+	at org.h2.engine.Session.prepareCommand(Session.java:379)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:156)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1321)
+	at org.h2.server.web.WebApp.query(WebApp.java:1010)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:972)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:959)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:748)
+05-17 19:53:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INsert into Book ( ID, AUTHOR_ID  , GENRE_ID , ISBN , PAGES , PUBLISHED , TITLE   ) VALUES (1, 1, 1, '12389321', 12, 'The Android Book') [21002-175]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:332)
+	at org.h2.message.DbException.get(DbException.java:172)
+	at org.h2.message.DbException.get(DbException.java:149)
+	at org.h2.message.DbException.get(DbException.java:138)
+	at org.h2.command.dml.Insert.prepare(Insert.java:266)
+	at org.h2.command.Parser.prepareCommand(Parser.java:240)
+	at org.h2.engine.Session.prepareLocal(Session.java:436)
+	at org.h2.engine.Session.prepareCommand(Session.java:379)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:156)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1321)
+	at org.h2.server.web.WebApp.query(WebApp.java:1010)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:972)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:959)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:748)
+05-17 19:56:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO BOOK ( ID, AUTHOR_ID  , GENRE_ID , ISBN , PAGES , PUBLISHED , TITLE, SUMMARY    ) VALUES (1, 1, 1, '12389321', 12, '2019-01-01', 'The Android Book', 'short summary for that book' "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INsert into Book ( ID, AUTHOR_ID  , GENRE_ID , ISBN , PAGES , PUBLISHED , TITLE, SUMMARY    ) VALUES (1, 1, 1, '12389321', 12, '2019-01-01', 'The Android Book', 'short summary for that book' [42001-175]
+05-18 07:41:42 jdbc[49]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-175]
+	at org.h2.message.DbException.get(DbException.java:172)
+	at org.h2.message.DbException.get(DbException.java:149)
+	at org.h2.message.DbException.get(DbException.java:138)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:171)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:90)
+	at org.h2.Driver.connect(Driver.java:73)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:656)
+	at org.h2.server.web.WebApp.login(WebApp.java:905)
+	at org.h2.server.web.WebApp.process(WebApp.java:209)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:168)
+	at org.h2.server.web.WebThread.process(WebThread.java:138)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-175]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:332)
+	... 14 more
+05-18 07:42:37 jdbc[49]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE GENRE(
+ID INT PRIMARY ID[*] AUTO_INCREMENT "; expected "KEY"; SQL statement:
+create table genre(
+ID INT PRIMARY ID AUTO_INCREMENT [42001-175]
+05-18 07:42:37 jdbc[49]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "LABEL[*] VARCHAR(60)
+)"; SQL statement:
+LABEL VARCHAR(60)
+) [42000-175]
+05-18 07:42:47 jdbc[49]: exception
+org.h2.jdbc.JdbcSQLException: Table "GENRE" not found; SQL statement:
+drop table genre [42102-175]
+05-18 07:42:48 jdbc[49]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE GENRE(
+ID INT PRIMARY KEY ID[*] AUTO_INCREMENT "; expected "HASH, AUTO_INCREMENT, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+create table genre(
+ID INT PRIMARY KEY ID AUTO_INCREMENT [42001-175]
+05-18 07:42:48 jdbc[49]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "LABEL[*] VARCHAR(60)
+)"; SQL statement:
+LABEL VARCHAR(60)
+) [42000-175]
+05-18 07:42:51 jdbc[49]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE GENRE(
+ID INT PRIMARY KEY ID[*] AUTO_INCREMENT "; expected "HASH, AUTO_INCREMENT, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+create table genre(
+ID INT PRIMARY KEY ID AUTO_INCREMENT [42001-175]
+05-18 07:42:51 jdbc[49]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "LABEL[*] VARCHAR(60)
+)"; SQL statement:
+LABEL VARCHAR(60)
+) [42000-175]
+05-18 07:43:00 jdbc[49]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE GENRE(
+ID INT PRIMARY KEY ID[*] AUTO_INCREMENT,
+LABEL VARCHAR(60)
+) "; expected "HASH, AUTO_INCREMENT, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+create table genre(
+ID INT PRIMARY KEY ID AUTO_INCREMENT,
+LABEL VARCHAR(60)
+) [42001-175]
+05-18 07:43:58 jdbc[49]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE GENRE(
+ID INT PRIMARY KEY ID[*] AUTO_INCREMENT,
+LABEL VARCHAR(60) NOT NULL
+) "; expected "HASH, AUTO_INCREMENT, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+create table genre(
+ID INT PRIMARY KEY ID AUTO_INCREMENT,
+LABEL VARCHAR(60) NOT NULL
+) [42001-175]
+05-18 07:44:06 jdbc[49]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE GENRE(
+ID INT PRIMARY KEY ID[*] AUTO_INCREMENT,
+LABEL VARCHAR(60) NOT NULL
+) "; expected "HASH, AUTO_INCREMENT, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+create table genre(
+ID INT PRIMARY KEY ID AUTO_INCREMENT,
+LABEL VARCHAR(60) NOT NULL
+) [42001-175]
+05-18 07:44:30 jdbc[49]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE GENRE(
+ID INT PRIMARY KEY ID[*] AUTO_INCREMENT,
+LABEL VARCHAR(60) NOT NULL,
+) "; expected "HASH, AUTO_INCREMENT, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+create table genre(
+ID INT PRIMARY KEY ID AUTO_INCREMENT,
+LABEL VARCHAR(60) NOT NULL,
+) [42001-175]
+05-18 07:46:27 jdbc[49]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE GENRE(
+ID INT NOT NULL PRIMARY KEY ID[*] AUTO_INCREMENT,
+LABEL VARCHAR(60) NOT NULL,
+) "; expected "HASH, AUTO_INCREMENT, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+create table genre(
+ID INT NOT NULL PRIMARY KEY ID AUTO_INCREMENT,
+LABEL VARCHAR(60) NOT NULL,
+) [42001-175]
+05-18 08:17:22 jdbc[49]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE TABLE BOOKSSSSSSSS(
+   ID   INT              NOT NULL PRIMARY KEY AUTO_INCREMENT,
+   ISBN VARCHAR (13)     NOT NULL,
+   TITLE VARCHAR (60)     NOT NULL,
+   SUMMARY TEXT     NOT NULL,
+   PAGES INT     NOT NULL,
+   PUBLISHED DATE     NOT NULL,
+   GENRE_ID INT     NOT NULL FOREIGN[*] KEY REFERENCES GENRES(ID) ON DELETE CASCADE,
+   AUTHOR_ID INT     NOT NULL FOREIGN KEY REFERENCES AUTHORS(ID) ON DELETE CASCADE,
+) "; expected "AS, DEFAULT, GENERATED, NOT, NULL, AUTO_INCREMENT, BIGSERIAL, SERIAL, IDENTITY, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, PRIMARY, UNIQUE, NOT, NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE BOOKSsssssss(
+   ID   INT              NOT NULL PRIMARY KEY AUTO_INCREMENT,
+   ISBN VARCHAR (13)     NOT NULL,
+   TITLE VARCHAR (60)     NOT NULL,
+   SUMMARY TEXT     NOT NULL,
+   PAGES INT     NOT NULL,
+   PUBLISHED DATE     NOT NULL,
+   GENRE_ID INT     NOT NULL FOREIGN KEY references GENRES(ID) ON DELETE CASCADE,
+   AUTHOR_ID INT     NOT NULL FOREIGN KEY references AUTHORS(ID) ON DELETE CASCADE,
+) [42001-175]
+05-18 08:18:06 jdbc[49]: exception
+org.h2.jdbc.JdbcSQLException: Table "GENRES" not found; SQL statement:
+CREATE TABLE BOOKSsssssss(
+   ID   INT              NOT NULL PRIMARY KEY AUTO_INCREMENT,
+   ISBN VARCHAR (13)     NOT NULL,
+   TITLE VARCHAR (60)     NOT NULL,
+   SUMMARY TEXT     NOT NULL,
+   PAGES INT     NOT NULL,
+   PUBLISHED DATE     NOT NULL,
+   GENRE_ID INT     NOT NULL,
+   AUTHOR_ID INT     NOT NULL,
+FOREIGN KEY (GENRE_ID) references GENRES(ID) ON DELETE CASCADE,
+FOREIGN KEY (AUTHOR_ID) references AUTHORS(ID) ON DELETE CASCADE
+) [42102-175]
+05-18 08:18:14 jdbc[49]: exception
+org.h2.jdbc.JdbcSQLException: Table "GENRES" not found; SQL statement:
+CREATE TABLE BOOKSsssssss(
+   ID   INT              NOT NULL PRIMARY KEY AUTO_INCREMENT,
+   ISBN VARCHAR (13)     NOT NULL,
+   TITLE VARCHAR (60)     NOT NULL,
+   SUMMARY TEXT     NOT NULL,
+   PAGES INT     NOT NULL,
+   PUBLISHED DATE     NOT NULL,
+   GENRE_ID INT     NOT NULL,
+   AUTHOR_ID INT     NOT NULL,
+FOREIGN KEY (GENRE_ID) references GENRES(ID) ON DELETE CASCADE,
+FOREIGN KEY (AUTHOR_ID) references AUTHORS(ID) ON DELETE CASCADE
+) [42102-175]
+05-18 08:18:32 jdbc[49]: exception
+org.h2.jdbc.JdbcSQLException: Table "AUTHORS" not found; SQL statement:
+CREATE TABLE BOOKSsssssss(
+   ID   INT              NOT NULL PRIMARY KEY AUTO_INCREMENT,
+   ISBN VARCHAR (13)     NOT NULL,
+   TITLE VARCHAR (60)     NOT NULL,
+   SUMMARY TEXT     NOT NULL,
+   PAGES INT     NOT NULL,
+   PUBLISHED DATE     NOT NULL,
+   GENRE_ID INT     NOT NULL,
+   AUTHOR_ID INT     NOT NULL,
+FOREIGN KEY (GENRE_ID) references GENRES(ID) ON DELETE CASCADE,
+FOREIGN KEY (AUTHOR_ID) references AUTHORS(ID) ON DELETE CASCADE
+) [42102-175]
+05-18 08:18:44 jdbc[49]: exception
+org.h2.jdbc.JdbcSQLException: Table "GENRE" not found; SQL statement:
+drop table genre [42102-175]
+05-18 08:18:53 jdbc[49]: exception
+org.h2.jdbc.JdbcSQLException: Table "BOOK" already exists; SQL statement:
+CREATE TABLE BOOK(
+   ID   INT              NOT NULL PRIMARY KEY AUTO_INCREMENT,
+   ISBN VARCHAR (13)     NOT NULL,
+   TITLE VARCHAR (60)     NOT NULL,
+   SUMMARY TEXT     NOT NULL,
+   PAGES INT     NOT NULL,
+   PUBLISHED DATE     NOT NULL,
+   GENRE_ID INT     NOT NULL,
+   AUTHOR_ID INT     NOT NULL,
+FOREIGN KEY (GENRE_ID) references GENRE(ID) ON DELETE CASCADE,
+FOREIGN KEY (AUTHOR_ID) references AUTHOR(ID) ON DELETE CASCADE
+) [42101-175]
+05-18 09:01:08 jdbc[75]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-175]
+	at org.h2.message.DbException.get(DbException.java:172)
+	at org.h2.message.DbException.get(DbException.java:149)
+	at org.h2.message.DbException.get(DbException.java:138)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:171)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:90)
+	at org.h2.Driver.connect(Driver.java:73)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:656)
+	at org.h2.server.web.WebApp.login(WebApp.java:905)
+	at org.h2.server.web.WebApp.process(WebApp.java:209)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:168)
+	at org.h2.server.web.WebThread.process(WebThread.java:138)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-175]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:332)
+	... 14 more
+05-18 09:01:11 jdbc[75]: exception
+org.h2.jdbc.JdbcSQLException: Column "GENRE_ID" not found; SQL statement:
+CREATE TABLE BOOK(
+   BOOK_ID   INT              NOT NULL PRIMARY KEY AUTO_INCREMENT,
+   ISBN VARCHAR (13)     NOT NULL,
+   TITLE VARCHAR (60)     NOT NULL,
+   SUMMARY TEXT     NOT NULL,
+   PAGES INT     NOT NULL,
+   PUBLISHED DATE     NOT NULL,
+   GENRE_ID INT     NOT NULL,
+   AUTHOR_ID INT     NOT NULL,
+   FOREIGN KEY (GENRE_ID) references GENRE(GENRE_ID) ON DELETE CASCADE,
+   FOREIGN KEY (v) references AUTHOR(AUTHOR_ID) ON DELETE CASCADE
+) [42122-175]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:332)
+	at org.h2.message.DbException.get(DbException.java:172)
+	at org.h2.message.DbException.get(DbException.java:149)
+	at org.h2.table.Table.getColumn(Table.java:626)
+	at org.h2.table.IndexColumn.mapColumns(IndexColumn.java:75)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:203)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:70)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:169)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:79)
+	at org.h2.command.Command.executeUpdate(Command.java:253)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:181)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:156)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1321)
+	at org.h2.server.web.WebApp.query(WebApp.java:1010)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:972)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:959)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:748)
+05-18 09:01:38 jdbc[75]: exception
+org.h2.jdbc.JdbcSQLException: Table "BOOK" not found; SQL statement:
+drop table BOOK [42102-175]
+05-18 09:01:38 jdbc[75]: exception
+org.h2.jdbc.JdbcSQLException: Column "V" not found; SQL statement:
+CREATE TABLE BOOK(
+   BOOK_ID   INT              NOT NULL PRIMARY KEY AUTO_INCREMENT,
+   ISBN VARCHAR (13)     NOT NULL,
+   TITLE VARCHAR (60)     NOT NULL,
+   SUMMARY TEXT     NOT NULL,
+   PAGES INT     NOT NULL,
+   PUBLISHED DATE     NOT NULL,
+   GENRE_ID INT     NOT NULL,
+   AUTHOR_ID INT     NOT NULL,
+   FOREIGN KEY (GENRE_ID) references GENRE(GENRE_ID) ON DELETE CASCADE,
+   FOREIGN KEY (v) references AUTHOR(AUTHOR_ID) ON DELETE CASCADE
+) [42122-175]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:332)
+	at org.h2.message.DbException.get(DbException.java:172)
+	at org.h2.message.DbException.get(DbException.java:149)
+	at org.h2.table.Table.getColumn(Table.java:626)
+	at org.h2.table.IndexColumn.mapColumns(IndexColumn.java:75)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:188)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:70)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:169)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:79)
+	at org.h2.command.Command.executeUpdate(Command.java:253)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:181)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:156)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1321)
+	at org.h2.server.web.WebApp.query(WebApp.java:1010)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:972)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:959)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:748)
+05-18 09:02:00 jdbc[75]: exception
+org.h2.jdbc.JdbcSQLException: Table "BOOK" not found; SQL statement:
+drop table BOOK [42102-175]
+05-18 10:42:48 jdbc[226]: exception
+org.h2.jdbc.JdbcSQLException: Table "AUTHORS" not found; SQL statement:
+select * from authors [42102-175]
+05-18 10:59:30 jdbc[226]: exception
+org.h2.jdbc.JdbcSQLException: Column "История" not found; SQL statement:
+insert into GENRE (LABEL) values
+    ("История"),
+    ("Разкази и новели"),
+    ("Автомобили"),
+    ("Туризъм и пътуване"),
+    ("Биографии"),
+    ("Романи и повести"),
+    ("Литература за деца и юноши") [42122-175]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:332)
+	at org.h2.message.DbException.get(DbException.java:172)
+	at org.h2.message.DbException.get(DbException.java:149)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:144)
+	at org.h2.command.dml.Insert.prepare(Insert.java:271)
+	at org.h2.command.Parser.prepareCommand(Parser.java:240)
+	at org.h2.engine.Session.prepareLocal(Session.java:436)
+	at org.h2.engine.Session.prepareCommand(Session.java:379)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:156)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1321)
+	at org.h2.server.web.WebApp.query(WebApp.java:1010)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:972)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:959)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:748)
+05-18 11:00:19 jdbc[226]: exception
+org.h2.jdbc.JdbcSQLException: Column "История" not found; SQL statement:
+insert into GENRE (LABEL) values
+    ("История") [42122-175]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:332)
+	at org.h2.message.DbException.get(DbException.java:172)
+	at org.h2.message.DbException.get(DbException.java:149)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:144)
+	at org.h2.command.dml.Insert.prepare(Insert.java:271)
+	at org.h2.command.Parser.prepareCommand(Parser.java:240)
+	at org.h2.engine.Session.prepareLocal(Session.java:436)
+	at org.h2.engine.Session.prepareCommand(Session.java:379)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:156)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1321)
+	at org.h2.server.web.WebApp.query(WebApp.java:1010)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:972)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:959)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:748)
+05-18 11:00:27 jdbc[226]: exception
+org.h2.jdbc.JdbcSQLException: Column "История" not found; SQL statement:
+insert into GENRE (LABEL) values ("История") [42122-175]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:332)
+	at org.h2.message.DbException.get(DbException.java:172)
+	at org.h2.message.DbException.get(DbException.java:149)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:144)
+	at org.h2.command.dml.Insert.prepare(Insert.java:271)
+	at org.h2.command.Parser.prepareCommand(Parser.java:240)
+	at org.h2.engine.Session.prepareLocal(Session.java:436)
+	at org.h2.engine.Session.prepareCommand(Session.java:379)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:156)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1321)
+	at org.h2.server.web.WebApp.query(WebApp.java:1010)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:972)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:959)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:748)
+05-18 11:00:31 jdbc[226]: exception
+org.h2.jdbc.JdbcSQLException: Column "История" not found; SQL statement:
+insert into GENRE ("LABEL") values ("История") [42122-175]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:332)
+	at org.h2.message.DbException.get(DbException.java:172)
+	at org.h2.message.DbException.get(DbException.java:149)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:144)
+	at org.h2.command.dml.Insert.prepare(Insert.java:271)
+	at org.h2.command.Parser.prepareCommand(Parser.java:240)
+	at org.h2.engine.Session.prepareLocal(Session.java:436)
+	at org.h2.engine.Session.prepareCommand(Session.java:379)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:168)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:156)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1321)
+	at org.h2.server.web.WebApp.query(WebApp.java:1010)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:972)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:959)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:748)
